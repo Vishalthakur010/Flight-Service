@@ -23,3 +23,13 @@ npx sequelize init
     npx sequelize db:migrate
     npx sequelize db:migrate:undo 
     ```
+- Create seed files inside seeders folder
+    ```
+    cd src
+    npx sequelize seed:generate --name add-airplanes
+    ```
+- Add demo data in the seed file and undo it
+    ```
+    npx sequelize db:seed:all
+    npx sequelize db:seed:undo:all
+    ```
