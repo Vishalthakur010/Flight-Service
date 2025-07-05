@@ -15,5 +15,4 @@ app.listen(serverConfig.PORT, ()=>{
     // Logger.info("Successfully started the server", {})
 })
 
-// lecture-3
-// 1:15
+// lecture-4
