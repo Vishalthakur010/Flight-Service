@@ -75,7 +75,7 @@ async function destroyAirplane(req,res){
     }
 }
 
-// update : /airplanes
+// update : /airplanes/:id
 // req.body : {capacity:400}
 async function updateAirplane(req,res){
     try{

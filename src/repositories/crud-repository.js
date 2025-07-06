@@ -44,6 +44,7 @@ class crudRepository {
                 id: id
             }
         })
+        return response
     }
 }
 
