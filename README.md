@@ -33,3 +33,8 @@ npx sequelize init
     npx sequelize db:seed:all
     npx sequelize db:seed:undo:all
     ```
+- Create an Empty Migration File
+    ```
+        npx sequelize db:migrate
+        Ex : npx sequelize migration:generate --name update-city-airport-association
+    ```
