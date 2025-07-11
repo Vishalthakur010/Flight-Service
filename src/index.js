@@ -16,4 +16,4 @@ app.listen(serverConfig.PORT, () => {
 })
 
 // lecture-6
-// 
+// 1:12
