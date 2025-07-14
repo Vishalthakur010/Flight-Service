@@ -1,5 +1,5 @@
 const crudRepository = require('./crud-repository')
-const { Flight, Airplane, Airport } = require('../models')
+const { Flight, Airplane, Airport, City } = require('../models')
 const { Sequelize } = require('sequelize')
 
 class FlightRepository extends crudRepository {
@@ -23,6 +23,10 @@ class FlightRepository extends crudRepository {
                     as: "departureAirport",
                     on: {
                         col1: Sequelize.where(Sequelize.col("Flight.departureAirportId"), "=", Sequelize.col("departureAirport.code"))
+                    },
+                    include:{
+                        model:City,
+                        required:true
                     }
                 },
                 {
@@ -31,6 +35,10 @@ class FlightRepository extends crudRepository {
                     as: "arrivalAirport",
                     on: {
                         col1: Sequelize.where(Sequelize.col("Flight.arrivalAirportId"), "=", Sequelize.col("arrivalAirport.code"))
+                    },
+                    include:{
+                        model:City,
+                        required:true
                     }
                 }
             ]
