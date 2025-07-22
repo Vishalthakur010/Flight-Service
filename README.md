@@ -27,9 +27,11 @@ npx sequelize init
     ```
     cd src
     npx sequelize seed:generate --name add-airplanes
+    npx sequelize seed:generate --name add-seats
     ```
 - Add demo data in the seed file and undo it
     ```
+    npx sequelize db:seed --seed 20250715122946-add-seats.js
     npx sequelize db:seed:all
     npx sequelize db:seed:undo:all
     ```
